@@ -1,0 +1,43 @@
+{
+  "name": "mock-bookmark-landing",
+  "version": "0.0.1-beta.1",
+  "description": "A Mock Bookmark site using Svelte, Scss, Node, JS",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsolis/mock-bookmark-landing.git"
+  },
+  "keywords": [
+    "Svelte",
+    "SCSS",
+    "Node",
+    "JS",
+    "Javascript"
+  ],
+  "author": "Freddy Solis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fsolis/mock-bookmark-landing/issues"
+  },
+  "homepage": "https://github.com/fsolis/mock-bookmark-landing#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "@rollup/plugin-url": "^5.0.1",
+    "node-sass": "^4.14.1",
+    "rollup": "^2.19.0",
+    "rollup-plugin-livereload": "^1.3.0",
+    "rollup-plugin-svelte": "^5.2.3",
+    "rollup-plugin-terser": "^6.1.0",
+    "svelte": "^3.23.2",
+    "svelte-preprocess-sass": "^0.2.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^1.0.3"
+  }
+}
