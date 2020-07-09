@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-grow: 1;
-    margin: 25px 10%;
+    margin: 1rem;
 
     &__logo {
       margin: auto 0;
@@ -17,11 +17,11 @@
     &__btn {
       background-color: white;
       color: $drk-blue;
-      border: none;
-      border-radius: 5px;
       padding: 10px;
       font-weight: $font-weight;
+      letter-spacing: 2px;
       width: 125px;
+      text-transform: uppercase;
 
       &--red {
         background-color: $primary-red;
@@ -38,9 +38,9 @@
     alt="Bookmark Logo" />
 
   <div class="nav">
-    <button class="nav__btn">Features</button>
-    <button class="nav__btn">Pricing</button>
-    <button class="nav__btn">Contact</button>
-    <button class="nav__btn nav__btn--red">Login</button>
+    <button class="nav__btn btn btn--no-bg">Features</button>
+    <button class="nav__btn btn btn--no-bg">Pricing</button>
+    <button class="nav__btn btn btn--no-bg">Contact</button>
+    <button class="nav__btn nav__btn--red btn">Login</button>
   </div>
 </header>

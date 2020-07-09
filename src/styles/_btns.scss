@@ -1,0 +1,21 @@
+@import './variables';
+
+.btn {
+    background-color: $light-grey;
+    border-radius: 5px;
+    border: none;
+    color: transparentize($drk-blue, 0.2);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px;
+    box-shadow: 2px 6px 6px transparentize(#000000, 0.8);
+
+    &--blue {
+        background-color: $primary-blue;
+        color: white;
+    }
+
+    &--no-bg {
+        box-shadow: none;
+    }
+}

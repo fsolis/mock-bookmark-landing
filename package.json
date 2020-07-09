@@ -1,6 +1,6 @@
 {
   "name": "mock-bookmark-landing",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "A Mock Bookmark site using Svelte, Scss, Node, JS",
   "main": "index.js",
   "scripts": {
