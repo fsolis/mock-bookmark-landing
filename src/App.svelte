@@ -1,4 +1,5 @@
 <script>
+  import Features from "./components/Features.svelte";
   import Footer from "./components/Footer.svelte";
   import Hero from "./components/Hero.svelte";
   import PageHeader from "./components/PageHeader.svelte";
@@ -21,5 +22,6 @@
 <main class="bookmark-site">
   <PageHeader />
   <Hero />
+  <Features />
   <Footer />
 </main>

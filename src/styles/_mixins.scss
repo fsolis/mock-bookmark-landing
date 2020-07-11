@@ -1,0 +1,30 @@
+@mixin image-background {
+    &:after {
+        content: "";
+        background-color: $primary-blue;
+        height: 380px;
+        width: 200%;
+        position: absolute;
+        bottom: -75px;
+        z-index: -1;
+        @content;
+    }
+}
+
+:global(.background-decorator--right) {
+    position: relative;
+
+    @include image-background {
+        border-radius: 0 0 0 150px;
+        left: 45%;
+    }
+}
+
+:global(.background-decorator--left) {
+    position: relative;
+
+    @include image-background {
+        border-radius: 0 0 150px 0;
+        right: 30%;
+    }
+}

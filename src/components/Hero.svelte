@@ -19,18 +19,6 @@
       display: flex;
       flex-grow: 4;
       position: relative;
-
-      &:after {
-        content: "";
-        background-color: $primary-blue;
-        border-radius: 0 0 0 150px;
-        height: 70%;
-        width: 200%;
-        position: absolute;
-        top: 40%;
-        left: 45%;
-        z-index: -1;
-      }
     }
 
     &__img {
@@ -80,7 +68,7 @@
       <button class="btn hero-btn-row__btn">Get it on Firefox</button>
     </div>
   </div>
-  <div class="hero__right">
+  <div class="hero__right background-decorator--right">
     <img
       class="hero__img"
       src="../assets/illustration-hero.svg"
