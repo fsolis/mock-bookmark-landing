@@ -3,6 +3,7 @@
   import Footer from "./components/Footer.svelte";
   import Hero from "./components/Hero.svelte";
   import PageHeader from "./components/PageHeader.svelte";
+  import Download from "./components/Download.svelte";
 </script>
 
 <style type="text/scss">
@@ -23,5 +24,6 @@
   <PageHeader />
   <Hero />
   <Features />
+  <Download />
   <Footer />
 </main>
