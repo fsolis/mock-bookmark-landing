@@ -1,4 +1,5 @@
 <script>
+  import FAQ from "./components/FAQ.svelte";
   import Features from "./components/Features.svelte";
   import Footer from "./components/Footer.svelte";
   import Hero from "./components/Hero.svelte";
@@ -25,5 +26,6 @@
   <Hero />
   <Features />
   <Download />
+  <FAQ />
   <Footer />
 </main>
