@@ -27,5 +27,6 @@
   <Features />
   <Download />
   <FAQ />
-  <Footer />
 </main>
+
+<Footer />
