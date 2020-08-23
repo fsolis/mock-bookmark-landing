@@ -5,17 +5,38 @@
     border-radius: 5px;
     border: none;
     color: transparentize($drk-blue, 0.2);
+    cursor: pointer;
     font-size: 15px;
     font-weight: bold;
     padding: 20px 30px;
     box-shadow: 2px 6px 6px transparentize(#000000, 0.8);
+    outline: none;
 
     &--blue {
         background-color: $primary-blue;
         color: white;
+
+        &:active,
+        &:focus {
+            color: $primary-blue !important;
+            border: 1px solid $primary-blue !important;
+        }
     }
 
     &--no-bg {
+        box-shadow: none;
+
+        &:active,
+        &:focus {
+            color: $primary-red;
+        }
+    }
+
+    &:active,
+    &:focus {
+        color: $drk-blue;
+        border: 1px solid $drk-blue;
+        background-color: white;
         box-shadow: none;
     }
 }

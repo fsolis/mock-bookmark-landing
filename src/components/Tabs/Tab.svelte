@@ -18,6 +18,11 @@
     color: $grey-blue;
     font-weight: $font-semi-bold;
     border-bottom: 1px solid $light-grey;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-red;
+    }
 
     &:active,
     &:focus {

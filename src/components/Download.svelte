@@ -58,8 +58,8 @@
     }
 
     &__divider {
-      border: none;
-      border-bottom: 5px dotted transparentize($grey-blue, 0.7);
+      height: 4px;
+      width: 100%;
     }
 
     > .btn {
@@ -83,7 +83,10 @@
         alt="Chrome logo" />
       <h3 class="extension__heading">Add to Chrome</h3>
       <p class="extension__desc">Minimum version 62</p>
-      <hr class="extension__divider" />
+      <img
+        class="extension__divider"
+        src="../assets/bg-dots.svg"
+        alt="Background Dots" />
       <button class="btn btn--blue">Add & Install Extension</button>
     </div>
     <div class="extension">
@@ -93,7 +96,10 @@
         alt="Firefox logo" />
       <h3 class="extension__heading">Add to Firefox</h3>
       <p class="extension__desc">Minimum version 55</p>
-      <hr class="extension__divider" />
+      <img
+        class="extension__divider"
+        src="../assets/bg-dots.svg"
+        alt="Background Dots" />
       <button class="btn btn--blue">Add & Install Extension</button>
     </div>
     <div class="extension">
@@ -103,7 +109,10 @@
         alt="Opera logo" />
       <h3 class="extension__heading">Add to Opera</h3>
       <p class="extension__desc">Minimum version 46</p>
-      <hr class="extension__divider" />
+      <img
+        class="extension__divider"
+        src="../assets/bg-dots.svg"
+        alt="Background Dots" />
       <button class="btn btn--blue">Add & Install Extension</button>
     </div>
   </div>

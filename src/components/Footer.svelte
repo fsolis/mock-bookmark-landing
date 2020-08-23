@@ -48,10 +48,23 @@
 
     &__nav-icon {
       margin: 0 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-red;
+      }
     }
 
     &__nav-link {
-      margin: 2rem;
+      margin: 1.5rem;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-red;
+      }
     }
 
     &__logo {
@@ -73,6 +86,13 @@
       height: 50px;
       line-height: 1;
       white-space: nowrap;
+
+      &:active,
+      &:focus {
+        border: 1px solid $primary-red;
+        background-color: white;
+        color: $primary-red;
+      }
     }
 
     &__field {
@@ -83,15 +103,6 @@
       min-width: 250px;
       padding: 0 16px;
     }
-  }
-
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-
-  .attribution a {
-    color: hsl(228, 45%, 44%);
   }
 </style>
 

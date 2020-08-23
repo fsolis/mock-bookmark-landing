@@ -26,6 +26,14 @@
       &--red {
         background-color: $primary-red;
         color: white;
+
+        &:active,
+        &:focus {
+          color: $primary-red;
+          background-color: white;
+          box-shadow: none;
+          border: 1px solid $primary-red;
+        }
       }
     }
   }
