@@ -1,3 +1,7 @@
+<script>
+  import Contact from "./Contact.svelte";
+</script>
+
 <style type="text/scss">
   @import "../styles/styles";
 
@@ -73,50 +77,13 @@
       margin: 0 2rem 0 4rem;
     }
   }
-
-  .contact-input {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    &__btn {
-      background-color: $primary-red;
-      box-shadow: none;
-      color: white;
-      height: 50px;
-      line-height: 1;
-      white-space: nowrap;
-
-      &:active,
-      &:focus {
-        border: 1px solid $primary-red;
-        background-color: white;
-        color: $primary-red;
-      }
-    }
-
-    &__field {
-      border-radius: 5px;
-      border: none;
-      height: 50px;
-      margin-right: 1rem;
-      min-width: 250px;
-      padding: 0 16px;
-    }
-  }
 </style>
 
 <footer class="footer">
   <div class="footer__contact">
     <h4 class="footer__sub-heading">35,000+ Already Joined</h4>
     <h1 class="footer__heading">Stay up-to-date with what we're doing</h1>
-    <div class="contact-input">
-      <input
-        class="contact-input__field"
-        placeholder="Enter your email address"
-        maxlength="70" />
-      <button class="contact-input__btn btn is-red">Contact Us</button>
-    </div>
+    <Contact />
   </div>
   <div class="footer__nav">
     <div class="footer__nav-links">
