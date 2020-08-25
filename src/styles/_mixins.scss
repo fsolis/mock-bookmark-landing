@@ -28,3 +28,27 @@
         right: 30%;
     }
 }
+
+@mixin tiny {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (min-width: 720px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width: 980px) {
+        @content;
+    }
+}
