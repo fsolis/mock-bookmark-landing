@@ -11,6 +11,7 @@
     padding: 20px 30px;
     box-shadow: 2px 6px 6px transparentize(#000000, 0.8);
     outline: none;
+    white-space: nowrap;
 
     &--blue {
         background-color: $primary-blue;

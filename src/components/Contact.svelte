@@ -3,7 +3,7 @@
   let inputRef;
   const hasError = writable(false);
 
-  const testEmail = email => {
+  const testEmail = (email) => {
     const emailReg = new RegExp(
       /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
     );
@@ -21,10 +21,15 @@
 
 <style type="text/scss">
   @import "../styles/styles";
+
   .contact-input {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+
+    @include medium {
+      flex-direction: row;
+    }
 
     &__btn {
       background-color: $primary-red;
@@ -45,11 +50,17 @@
     &__field {
       border-radius: 5px;
       border: none;
-      height: 50px;
-      margin-right: 1rem;
-      width: 285px;
+      margin: 0 auto 1rem auto;
       padding: 0 16px;
+      height: 50px;
+      width: calc(100% - #{32px});
       outline: none;
+
+      @include medium {
+        margin: 0;
+        margin-right: 1rem;
+        width: 285px;
+      }
 
       &--error {
         border: 2px solid $primary-red;

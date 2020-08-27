@@ -3,41 +3,51 @@
 
   .hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     margin: 1rem;
+
+    @include medium {
+      flex-direction: row;
+    }
 
     &__left {
       display: flex;
       flex-direction: column;
-      flex-grow: 2;
+      flex: 1;
       padding: 1rem;
       margin: auto;
+      text-align: center;
+
+      @include medium {
+        flex: 2;
+        text-align: start;
+      }
     }
 
     &__right {
       display: flex;
-      flex-grow: 4;
+      flex: 1;
       position: relative;
+
+      @include medium {
+        flex: 3;
+      }
     }
 
     &__img {
       position: relative;
-      right: -3rem;
-      bottom: -3rem;
       height: auto;
-      width: 800px;
+      width: 80%;
+      margin: auto;
     }
 
     &__title {
       color: $drk-blue;
-      font-size: 3.25rem;
-      margin-bottom: 0;
     }
 
     &__description {
       color: $grey-blue;
-      font-size: 1.25rem;
       font-weight: $font-semi-bold;
       line-height: 2.15rem;
       margin-bottom: 2rem;
@@ -47,6 +57,11 @@
   .hero-btn-row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
+    @include medium {
+      justify-content: flex-start;
+    }
 
     &__btn {
       &:first-of-type {
@@ -68,7 +83,7 @@
       <button class="btn hero-btn-row__btn">Get it on Firefox</button>
     </div>
   </div>
-  <div class="hero__right background-decorator--right">
+  <div class="hero__right">
     <img
       class="hero__img"
       src="../assets/illustration-hero.svg"

@@ -4,6 +4,7 @@
 
 <style type="text/scss">
   @import "../styles/styles";
+
   .features {
     display: flex;
     flex-direction: column;
@@ -16,51 +17,71 @@
 
     &__sub-heading {
       color: $grey-blue;
-      max-width: 40%;
+      max-width: 80%;
       margin: 0 auto 2.25rem auto;
       font-size: 1.25rem;
       line-height: 2rem;
+
+      @include large {
+        max-width: 50%;
+      }
     }
 
     &__searching {
       .tab-panel__img {
         width: 550px;
       }
-
-      &.background-decorator--left:after {
-        bottom: -30px;
-      }
     }
   }
 
-  :global(.tab-panel) {
+  .features :global(.tab-panel) {
     padding: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     margin: 3rem 0;
+
+    @include medium {
+      flex-direction: row;
+    }
   }
 
   .tab-panel {
+    display: flex;
+
     &__left {
-      width: 65%;
+      flex: 1;
+
+      @include medium {
+        flex: 1 1 65%;
+      }
     }
 
     &__right {
-      width: 35%;
-      margin: auto 0 auto 0;
-      text-align: start;
+      flex: 1;
+      text-align: center;
+
+      @include medium {
+        margin: auto 0 auto 0;
+        flex: 1 1 35%;
+        text-align: start;
+      }
     }
 
     &__description {
       font-size: 1.25rem;
       color: $grey-blue;
-      max-width: 100%;
-      margin: 2rem 0;
+      max-width: 80%;
+      margin: 2rem auto;
+
+      @include medium {
+        max-width: 100%;
+        margin: 2rem 0;
+      }
     }
 
     &__img {
-      width: 650px;
+      width: 80%;
     }
   }
 </style>
@@ -80,8 +101,7 @@
       <Tab>Easy Sharing</Tab>
     </TabList>
     <TabPanel>
-      <div
-        class="features__bookmarking tab-panel__left background-decorator--left">
+      <div class="features__bookmarking tab-panel__left">
         <img
           class="tab-panel__img"
           src="../assets/illustration-features-tab-1.svg"
@@ -98,8 +118,7 @@
       </div>
     </TabPanel>
     <TabPanel>
-      <div
-        class="features__searching tab-panel__left background-decorator--left">
+      <div class="features__searching tab-panel__left">
         <img
           class="tab-panel__img"
           src="../assets/illustration-features-tab-2.svg"
@@ -115,8 +134,7 @@
       </div>
     </TabPanel>
     <TabPanel>
-      <div
-        class="features__searching tab-panel__left background-decorator--left">
+      <div class="features__searching tab-panel__left">
         <img
           class="tab-panel__img"
           src="../assets/illustration-features-tab-3.svg"

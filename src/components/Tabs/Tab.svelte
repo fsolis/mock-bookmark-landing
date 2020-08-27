@@ -19,20 +19,46 @@
     font-weight: $font-semi-bold;
     border-bottom: 1px solid $light-grey;
     cursor: pointer;
+    position: relative;
 
-    &:hover {
-      color: $primary-red;
+    &:first-of-type {
+      border-top: 1px solid $light-grey;
     }
 
-    &:active,
-    &:focus {
-      outline: none;
-      border: none;
-      border-bottom: 4px solid $primary-red;
+    @include medium {
+      &:first-of-type {
+        border-top: none;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 4px solid $primary-red;
+      }
+
+      &__selected {
+        &::after {
+          display: none;
+        }
+        border-bottom: 4px solid $primary-red;
+      }
     }
 
     &__selected {
-      border-bottom: 4px solid $primary-red;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 6px;
+        background-color: $primary-red;
+        bottom: 0;
+        left: calc(50% - #{100px});
+      }
+    }
+
+    &:hover {
+      color: $primary-red;
     }
   }
 </style>

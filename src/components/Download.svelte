@@ -14,25 +14,35 @@
 
     &__sub-header {
       color: $grey-blue;
-      max-width: 45%;
+      max-width: 80%;
       margin: 0 auto;
       font-size: 1.25rem;
+
+      @include medium {
+        max-width: 45%;
+      }
     }
   }
 
   .extensions {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     justify-content: center;
-    padding: 3rem;
+
+    @include medium {
+      flex-direction: row;
+      padding: 3rem;
+    }
   }
 
   .extension {
     border-radius: 5px;
     box-shadow: 2px 2px 3px 2px transparentize($grey-blue, 0.8);
     height: fit-content;
-    margin: 2rem;
+    margin: 2rem auto;
+    max-width: 265px;
+    min-width: 245px;
 
     &:nth-of-type(2) {
       margin-top: 5rem;
@@ -64,7 +74,7 @@
 
     > .btn {
       padding: 1rem 2.25rem;
-      margin: 1.5rem;
+      margin: 1.5rem auto;
     }
   }
 </style>

@@ -8,6 +8,11 @@
   .faq {
     margin: 0 auto;
 
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
     &__heading {
       text-align: center;
       max-width: 650px;
@@ -23,15 +28,14 @@
     }
 
     &__info-btn {
-      margin: 3rem 0;
-      margin-left: 40%;
+      margin: 3rem auto;
     }
   }
 
   :global(.faq-collapse.collapse) {
     max-width: 650px;
     overflow: hidden;
-    margin: 1rem auto;
+    margin: 1rem;
 
     :global(.collapse-item) {
       color: $drk-blue;

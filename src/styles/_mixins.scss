@@ -1,34 +1,3 @@
-@mixin image-background {
-    &:after {
-        content: "";
-        background-color: $primary-blue;
-        height: 380px;
-        width: 200%;
-        position: absolute;
-        bottom: -75px;
-        z-index: -1;
-        @content;
-    }
-}
-
-:global(.background-decorator--right) {
-    position: relative;
-
-    @include image-background {
-        border-radius: 0 0 0 150px;
-        left: 45%;
-    }
-}
-
-:global(.background-decorator--left) {
-    position: relative;
-
-    @include image-background {
-        border-radius: 0 0 150px 0;
-        right: 30%;
-    }
-}
-
 @mixin tiny {
     @media screen and (min-width: 480px) {
         @content;
@@ -50,5 +19,67 @@
 @mixin large {
     @media screen and (min-width: 980px) {
         @content;
+    }
+}
+
+@mixin image-background {
+    &:after {
+        content: "";
+        background-color: $primary-blue;
+        height: 330px;
+        width: 100%;
+        position: absolute;
+        bottom: 0%;
+        z-index: -1;
+        @content;
+    }
+}
+
+@mixin image-right {
+    position: relative;
+    bottom: -3rem;
+    height: 385px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @content;
+
+    @include medium {
+        height: 300px;
+    }
+
+    // @include image-background-right();
+}
+
+@mixin image-background-right {
+    @include image-background {
+        border-radius: 0 0 0 25%;
+        left: 30%;
+    }
+}
+
+@mixin image-background-left {
+    @include image-background {
+        border-radius: 0 0 25% 0;
+        right: 30%;
+    }
+}
+
+:global(.background-decorator--right) {
+    position: relative;
+
+    @include image-background {
+        border-radius: 0 0 0 150px;
+        left: 45%;
+    }
+}
+
+:global(.background-decorator--left) {
+    position: relative;
+
+    @include image-background {
+        border-radius: 0 0 150px 0;
+        right: 30%;
     }
 }

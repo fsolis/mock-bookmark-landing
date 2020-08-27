@@ -1,8 +1,14 @@
-<style>
+<style type="text/scss">
+  @import "../../styles/styles";
+
   .tab-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+
+    @include medium {
+      flex-direction: row;
+    }
   }
 </style>
 

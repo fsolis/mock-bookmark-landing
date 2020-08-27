@@ -26,8 +26,8 @@
   .nav {
     display: none;
 
-    @include large {
-      display: block;
+    @include medium {
+      display: flex;
     }
 
     &__btn {
@@ -59,7 +59,7 @@
     align-items: center;
     cursor: pointer;
 
-    @include large {
+    @include medium {
       display: none;
     }
 
