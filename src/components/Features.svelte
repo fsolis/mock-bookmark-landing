@@ -1,4 +1,5 @@
 <script>
+  import ImageHero from "./ImageHero.svelte";
   import { Tabs, TabList, TabPanel, Tab } from "./Tabs";
 </script>
 
@@ -49,14 +50,6 @@
   .tab-panel {
     display: flex;
 
-    &__left {
-      flex: 1;
-
-      @include medium {
-        flex: 1 1 65%;
-      }
-    }
-
     &__right {
       flex: 1;
       text-align: center;
@@ -65,6 +58,7 @@
         margin: auto 0 auto 0;
         flex: 1 1 35%;
         text-align: start;
+        padding-left: 1rem;
       }
     }
 
@@ -84,6 +78,26 @@
       width: 80%;
     }
   }
+
+  :global(.img-hero > .feature-img-hero) {
+    position: relative;
+    height: 180px;
+    width: auto;
+    margin: auto;
+    z-index: 2;
+
+    @include small {
+      height: 240px;
+    }
+
+    @include small-medium {
+      height: 300px;
+    }
+
+    @include medium {
+      height: 100%;
+    }
+  }
 </style>
 
 <section class="features">
@@ -101,12 +115,12 @@
       <Tab>Easy Sharing</Tab>
     </TabList>
     <TabPanel>
-      <div class="features__bookmarking tab-panel__left">
+      <ImageHero directionRight={false}>
         <img
-          class="tab-panel__img"
+          class="feature-img-hero"
           src="../assets/illustration-features-tab-1.svg"
           alt="bookmark in one click" />
-      </div>
+      </ImageHero>
       <div class="tab-panel__right">
         <h1>Bookmark in one click</h1>
         <p class="tab-panel__description">
@@ -118,12 +132,11 @@
       </div>
     </TabPanel>
     <TabPanel>
-      <div class="features__searching tab-panel__left">
+      <ImageHero directionRight={false}>
         <img
-          class="tab-panel__img"
           src="../assets/illustration-features-tab-2.svg"
           alt="Intelligent search" />
-      </div>
+      </ImageHero>
       <div class="tab-panel__right">
         <h1>Intelligent Search</h1>
         <p class="tab-panel__description">
@@ -134,12 +147,11 @@
       </div>
     </TabPanel>
     <TabPanel>
-      <div class="features__searching tab-panel__left">
+      <ImageHero directionRight={false}>
         <img
-          class="tab-panel__img"
           src="../assets/illustration-features-tab-3.svg"
           alt="Intelligent search" />
-      </div>
+      </ImageHero>
       <div class="tab-panel__right">
         <h1>Share your bookmarks</h1>
         <p class="tab-panel__description">

@@ -5,7 +5,13 @@
 }
 
 @mixin small {
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 420px) {
+        @content;
+    }
+}
+
+@mixin small-medium {
+    @media screen and (min-width: 550px) {
         @content;
     }
 }
@@ -48,8 +54,6 @@
     @include medium {
         height: 300px;
     }
-
-    // @include image-background-right();
 }
 
 @mixin image-background-right {

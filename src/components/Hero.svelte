@@ -1,3 +1,7 @@
+<script>
+  import ImageHero from "./ImageHero.svelte";
+</script>
+
 <style type="text/scss">
   @import "../styles/styles";
 
@@ -32,14 +36,53 @@
 
       @include medium {
         flex: 3;
+        height: 185px;
+        margin: auto 0;
+      }
+
+      @media screen and (min-width: 750px) {
+        height: 225px;
+      }
+
+      @include large {
+        height: 300px;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 80%;
+        background-color: $primary-blue;
+        border-radius: 0 0 0 25%;
+        top: 35%;
+        left: 40%;
+        z-index: 1;
+
+        @include medium {
+          top: 30%;
+        }
       }
     }
 
     &__img {
       position: relative;
-      height: auto;
-      width: 80%;
+      height: 180px;
+      width: auto;
       margin: auto;
+      z-index: 2;
+
+      @include small {
+        height: 240px;
+      }
+
+      @include small-medium {
+        height: 300px;
+      }
+
+      @include medium {
+        height: 100%;
+      }
     }
 
     &__title {
@@ -56,17 +99,45 @@
 
   .hero-btn-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-
-    @include medium {
-      justify-content: flex-start;
-    }
+    align-items: center;
 
     &__btn {
-      &:first-of-type {
-        margin-right: 1rem;
+      margin-bottom: 1rem;
+      max-width: 250px;
+    }
+
+    @include medium {
+      flex-direction: row;
+      justify-content: flex-start;
+
+      &__btn {
+        margin-bottom: 0;
+        &:first-of-type {
+          margin-right: 1rem;
+        }
       }
+    }
+  }
+
+  :global(.img-hero > .main-img-hero) {
+    position: relative;
+    height: 180px;
+    width: auto;
+    margin: auto;
+    z-index: 2;
+
+    @include small {
+      height: 240px;
+    }
+
+    @include small-medium {
+      height: 300px;
+    }
+
+    @include medium {
+      height: 100%;
     }
   }
 </style>
@@ -83,10 +154,10 @@
       <button class="btn hero-btn-row__btn">Get it on Firefox</button>
     </div>
   </div>
-  <div class="hero__right">
+  <ImageHero directionRight={true}>
     <img
-      class="hero__img"
+      class="main-img-hero"
       src="../assets/illustration-hero.svg"
       alt="Boomkark Page Layout" />
-  </div>
+  </ImageHero>
 </section>

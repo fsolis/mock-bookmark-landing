@@ -11,7 +11,7 @@
 
   export let title;
   let currentItem;
-  selectedItem.subscribe(item => (currentItem = item));
+  selectedItem.subscribe((item) => (currentItem = item));
 
   const handleClick = () => {
     if (currentItem === item) {
@@ -39,7 +39,8 @@
     }
 
     &__img {
-      height: 25px;
+      min-width: 30px;
+      height: 30px;
       width: 30px;
       align-self: center;
 
